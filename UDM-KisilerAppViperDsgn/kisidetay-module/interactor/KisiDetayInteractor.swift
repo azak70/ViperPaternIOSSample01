@@ -6,6 +6,10 @@
 //
 
 import Foundation
-class KisiDetayInteractor {
+class KisiDetayInteractor :PresenterToInteractorKisiDetayProtocol {
+    func kisiGuncelle(kisiId: Int, kisiAd: String, kisiTel: String) {
+        print("Kisi Guncelle > Id:\(kisiTel) ad: \(kisiAd) tel:\(kisiTel)")
+    }
+    
     
 }

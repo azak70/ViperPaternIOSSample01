@@ -8,12 +8,13 @@
 import UIKit
 
 class KisiDetayVC: UIViewController {
-
+    var kisidetaypresenternesnesi : ViewToPresenterKisiDetayProtocol?
     @IBOutlet weak var tfkisiad: UITextField!
     @IBOutlet weak var tfkisitel: UITextField!
     var kisi:Kisiler?
     override func viewDidLoad() {
         super.viewDidLoad()
+        KisiDetayRouter.createModule(ref: self)
 
         if let _kisi = kisi {
             tfkisiad.text = _kisi.KisiAd
@@ -25,12 +26,10 @@ class KisiDetayVC: UIViewController {
 
     @IBAction func btnguncelle(_ sender: Any) {
         if let ka = tfkisiad.text ,let  kt = tfkisitel.text, let k = kisi {
-            guncelle(kisiid: k.KisiId, kisiad: ka, kisitel: kt)
+            kisidetaypresenternesnesi?.guncelle(kisiId: k.KisiId, kisiAd: ka, kisiTel: kt)
         }
     }
-    func guncelle(kisiid:Int,kisiad:String,kisitel:String){
-        print ("Kisi Guncelle  id = \(kisiid) ad : \(kisiad) tel : \(kisitel)");
-    }
+    
     /*
     // MARK: - Navigation
 

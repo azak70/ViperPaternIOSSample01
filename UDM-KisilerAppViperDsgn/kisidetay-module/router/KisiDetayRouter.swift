@@ -6,4 +6,11 @@
 //
 
 import Foundation
-class KisiDetayRouter {}
+class KisiDetayRouter : PresenterToRouterKisiDetayProtocol{
+    static func createModule(ref: KisiDetayVC) {
+        ref.kisidetaypresenternesnesi = KisiDetayPresenter()
+        ref.kisidetaypresenternesnesi?.kisidetayIneractor = KisiDetayInteractor() 
+    }
+    
+    
+}

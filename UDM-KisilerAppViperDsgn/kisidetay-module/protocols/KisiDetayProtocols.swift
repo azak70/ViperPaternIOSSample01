@@ -6,4 +6,15 @@
 //
 
 import Foundation
-
+protocol ViewToPresenterKisiDetayProtocol {
+    var kisidetayIneractor : PresenterToInteractorKisiDetayProtocol?{get set}
+    func guncelle(kisiId:Int,kisiAd:String ,kisiTel:String)
+}
+ 
+protocol PresenterToInteractorKisiDetayProtocol {
+    func kisiGuncelle(kisiId:Int,kisiAd:String ,kisiTel:String)
+    
+}
+protocol PresenterToRouterKisiDetayProtocol {
+    static func createModule(ref:KisiDetayVC)
+}

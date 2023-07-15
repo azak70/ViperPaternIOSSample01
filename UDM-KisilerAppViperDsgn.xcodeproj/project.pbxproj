@@ -93,7 +93,6 @@
 				AF2DCF492A2679E500302448 /* SceneDelegate.swift */,
 				AF5DD6082A6294370009B9EB /* kisikayit-module */,
 				AF5DD6092A62951F0009B9EB /* kisidetay-module */,
-				AF2DCF5D2A267DFC00302448 /* KisiDetayVC.swift */,
 				AF2DCF4D2A2679E500302448 /* Main.storyboard */,
 				AF2DCF612A2B1C0C00302448 /* KisiTableViewCell.swift */,
 				AF2DCF502A2679E600302448 /* Assets.xcassets */,
@@ -131,6 +130,7 @@
 		AF5DD6092A62951F0009B9EB /* kisidetay-module */ = {
 			isa = PBXGroup;
 			children = (
+				AF5DD6332A632B230009B9EB /* view */,
 				AF5DD6272A6318150009B9EB /* protocols */,
 				AF5DD6262A6317F40009B9EB /* router */,
 				AF5DD6252A6317DA0009B9EB /* presenter */,
@@ -265,6 +265,14 @@
 				AF5DD6312A6321940009B9EB /* KisiKayitPresenter.swift */,
 			);
 			path = presenter;
+			sourceTree = "<group>";
+		};
+		AF5DD6332A632B230009B9EB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AF2DCF5D2A267DFC00302448 /* KisiDetayVC.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

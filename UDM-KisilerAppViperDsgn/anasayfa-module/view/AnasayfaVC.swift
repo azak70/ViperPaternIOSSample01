@@ -64,7 +64,7 @@ extension AnasayfaVC : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let kisi = KisilerListe[indexPath.row]
         let silAction = UIContextualAction(style: .destructive, title: "Sil") { (contexttualAction , view, bool) in
-            let alert = UIAlertController(title: "Silme İşlemi", message: "\(kisi.KisiAd) silinsin mi ?" , preferredStyle: .actionSheet)
+            let alert = UIAlertController(title: "Silme İşlemi", message: "\(kisi.KisiAd ?? "") silinsin mi ?" , preferredStyle: .actionSheet)
             
             let evetAction = UIAlertAction(title: "Evet", style: .cancel) { action in
                 print("\(kisi.KisiAd ?? "-") silindi. ")

@@ -6,6 +6,12 @@
 //
 
 import Foundation
-class KisiDetayPresenter {
+class KisiDetayPresenter:ViewToPresenterKisiDetayProtocol{
+    var kisidetayIneractor: PresenterToInteractorKisiDetayProtocol?
+    
+    func guncelle(kisiId: Int, kisiAd: String, kisiTel: String) {
+        kisidetayIneractor?.kisiGuncelle(kisiId: kisiId, kisiAd: kisiAd, kisiTel: kisiTel)
+    }
+    
     
 }
