@@ -8,10 +8,10 @@
 import UIKit
 
 class KisiKayitVC: UIViewController {
-
+    var kisikayitPresenterNesnesi:ViewToPresenterKisiKayitProtocol?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        KisiKayitRouter.createModule(ref: self)
         // Do any additional setup after loading the view.
     }
     @IBOutlet weak var tfkisiad: UITextField!
@@ -21,12 +21,10 @@ class KisiKayitVC: UIViewController {
     
     @IBAction func kaydet(_ sender: Any) {
         if let ka = tfkisiad.text, let kt = tfkisitel.text {
-        kisikaydet(ad: ka, tel: kt)
+            kisikayitPresenterNesnesi?.kisiEkle(kisiAd: ka, kisiTel: kt)
     }
     }
-    func kisikaydet(ad:String,tel:String){
-        print("Kisi Ad:\(ad)- tel : \(tel)")
-    }
+ 
     /*
     // MARK: - Navigation
 
