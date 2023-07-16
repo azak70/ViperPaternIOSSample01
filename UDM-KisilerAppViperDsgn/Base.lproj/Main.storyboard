@@ -18,10 +18,13 @@
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jzm-nP-efM">
                                 <rect key="frame" x="0.0" y="140" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="B7v-NR-RB8"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GJT-gq-nHa">
-                                <rect key="frame" x="0.0" y="184" width="414" height="712"/>
+                                <rect key="frame" x="0.0" y="218" width="414" height="678"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="76" id="AhG-Hg-5vO" customClass="KisiTableViewCell" customModule="UDM_KisilerAppViperDsgn" customModuleProvider="target">
@@ -58,14 +61,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GJT-gq-nHa" firstAttribute="leading" secondItem="jzm-nP-efM" secondAttribute="leading" id="3GS-BV-rQk"/>
-                            <constraint firstItem="jzm-nP-efM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8BP-68-0zf"/>
-                            <constraint firstItem="GJT-gq-nHa" firstAttribute="top" secondItem="jzm-nP-efM" secondAttribute="bottom" id="P2C-fy-gt3"/>
-                            <constraint firstItem="jzm-nP-efM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QX9-I5-C5R"/>
-                            <constraint firstItem="GJT-gq-nHa" firstAttribute="trailing" secondItem="jzm-nP-efM" secondAttribute="trailing" id="eDh-vI-t8R"/>
+                            <constraint firstItem="GJT-gq-nHa" firstAttribute="top" secondItem="jzm-nP-efM" secondAttribute="bottom" constant="34" id="727-bx-n8i"/>
+                            <constraint firstItem="jzm-nP-efM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CjE-vA-fda"/>
+                            <constraint firstItem="jzm-nP-efM" firstAttribute="trailing" secondItem="GJT-gq-nHa" secondAttribute="trailing" id="YcS-Jt-d4d"/>
+                            <constraint firstItem="jzm-nP-efM" firstAttribute="leading" secondItem="GJT-gq-nHa" secondAttribute="leading" id="Ygh-pP-BdW"/>
+                            <constraint firstItem="jzm-nP-efM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="awY-4t-9KM"/>
                             <constraint firstAttribute="bottomMargin" secondItem="GJT-gq-nHa" secondAttribute="bottom" constant="-34" id="iWI-kE-ps4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jzm-nP-efM" secondAttribute="bottom" constant="678" id="kTm-Bb-wMo"/>
-                            <constraint firstItem="jzm-nP-efM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mFF-YH-OE1"/>
+                            <constraint firstItem="jzm-nP-efM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vJM-UK-Yr1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kisiler" id="Stw-fO-ak7">
@@ -76,7 +78,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchBar" destination="jzm-nP-efM" id="Q9g-Tt-hJR"/>
+                        <outlet property="searchBar" destination="jzm-nP-efM" id="X8b-RU-WNu"/>
                         <outlet property="tableview" destination="GJT-gq-nHa" id="Hzk-5a-1yp"/>
                         <segue destination="b6u-RC-9Sd" kind="show" identifier="toDetay" id="xvt-Un-FYF"/>
                     </connections>

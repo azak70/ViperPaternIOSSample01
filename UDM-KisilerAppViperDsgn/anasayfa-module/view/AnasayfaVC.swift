@@ -10,7 +10,7 @@ import UIKit
 class AnasayfaVC: UIViewController {
 var KisilerListe = [Kisiler]()
     @IBOutlet weak var tableview: UITableView!
-    
+    var anasayfaPresenterNesnesi : ViewToPresenterAnasayfaProtocol?
     @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,21 +18,27 @@ var KisilerListe = [Kisiler]()
         searchBar.delegate = self
         tableview.delegate = self
         tableview.dataSource = self
-        let k1 = Kisiler(kisiad: "Ahmet", kisitel: "9555553234", kisiid: 1)
-        let k2 = Kisiler(kisiad: "Mehmet", kisitel: "3322332323", kisiid: 2)
-        KisilerListe.append(k1)
-        KisilerListe.append(k2)
+        AnasayfaRouter.createModule(ref: self)
     }
     override func viewWillAppear(_ animated: Bool) {
         print("Anasayfaya döndü")
         
-        
+        anasayfaPresenterNesnesi?.kisileriYukle()
     }
 
 
 }
+extension AnasayfaVC:PresenterToViewAnasayfaProtocol
+{
+    func vieweVeriGonder(kisilerListesi: Array<Kisiler>) {
+        self.KisilerListe=kisilerListesi
+        self.tableview.reloadData()
+    }
+}
+ 
 extension AnasayfaVC :UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        anasayfaPresenterNesnesi?.Ara(aramaKelimesi: searchText)
         print("Search Text : \(searchText)"
         )
     }
@@ -67,7 +73,7 @@ extension AnasayfaVC : UITableViewDelegate,UITableViewDataSource {
             let alert = UIAlertController(title: "Silme İşlemi", message: "\(kisi.KisiAd ?? "") silinsin mi ?" , preferredStyle: .actionSheet)
             
             let evetAction = UIAlertAction(title: "Evet", style: .cancel) { action in
-                print("\(kisi.KisiAd ?? "-") silindi. ")
+                self.anasayfaPresenterNesnesi?.Sil(kisiId: kisi.KisiId)
             }
             let cancelAction = UIAlertAction(title: "iPtal", style: .destructive, handler: {action in}   )
             alert.addAction(evetAction)
