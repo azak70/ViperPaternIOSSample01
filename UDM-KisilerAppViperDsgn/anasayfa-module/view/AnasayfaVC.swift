@@ -19,11 +19,30 @@ var KisilerListe = [Kisiler]()
         tableview.delegate = self
         tableview.dataSource = self
         AnasayfaRouter.createModule(ref: self)
+        veritabanikopyala()
     }
     override func viewWillAppear(_ animated: Bool) {
         print("Anasayfaya döndü")
         
         anasayfaPresenterNesnesi?.kisileriYukle()
+    }
+    func veritabanikopyala()
+    {
+        let bundleyolu = Bundle.main.path(forResource: "rehber", ofType: "sqlite")
+        let hedefyol = NSSearchPathForDirectoriesInDomains( .documentDirectory, .userDomainMask, true).first!
+        let filemanager = FileManager.default
+        let kopyalanacakYer = URL(fileURLWithPath: hedefyol).appendingPathComponent("rehber.sqlite")
+        if filemanager.fileExists(atPath: kopyalanacakYer.path)
+        {
+            print("Veri Tabanı dizinde zaten var !")
+        }
+        else
+        {
+            do {
+            try filemanager.copyItem(at: bundleyolu!, to: kopyalanacakYer.path)
+            }
+            catch {}
+        }
     }
 
 
