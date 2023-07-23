@@ -21,6 +21,7 @@ var KisilerListe = [Kisiler]()
         AnasayfaRouter.createModule(ref: self)
         veritabanikopyala()
     }
+  
     override func viewWillAppear(_ animated: Bool) {
         print("Anasayfaya döndü")
         
@@ -39,7 +40,7 @@ var KisilerListe = [Kisiler]()
         else
         {
             do {
-            try filemanager.copyItem(at: bundleyolu!, to: kopyalanacakYer.path)
+                try filemanager.copyItem(atPath: bundleyolu!, toPath: kopyalanacakYer.path)
             }
             catch {}
         }
