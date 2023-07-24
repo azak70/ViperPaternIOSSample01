@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "FFE27B3A-4E3C-43B7-A059-58710A4F5BC8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "770E6DAF-473B-4F7F-A446-052ED12A6908"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UDM-KisilerAppViperDsgn/kisikayit-module/interactor/KisiKayitInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "kisiEkle(kisiAd:kisiTel:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "770E6DAF-473B-4F7F-A446-052ED12A6908 - e578abec519c4564"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UDM_KisilerAppViperDsgn.KisiKayitInteractor.kisiEkle(kisiAd: Swift.String, kisiTel: Swift.String) -&gt; ()"
+                  moduleName = "UDM-KisilerAppViperDsgn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmetazak/development/iosProjects/training/UDM-KisilerAppViperDsgn/ViperPaternIOSSample01/UDM-KisilerAppViperDsgn/kisikayit-module/interactor/KisiKayitInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "770E6DAF-473B-4F7F-A446-052ED12A6908 - e578abec519c4564"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UDM_KisilerAppViperDsgn.KisiKayitInteractor.kisiEkle(kisiAd: Swift.String, kisiTel: Swift.String) -&gt; ()"
+                  moduleName = "UDM-KisilerAppViperDsgn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmetazak/development/iosProjects/training/UDM-KisilerAppViperDsgn/ViperPaternIOSSample01/UDM-KisilerAppViperDsgn/kisikayit-module/interactor/KisiKayitInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "488">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
