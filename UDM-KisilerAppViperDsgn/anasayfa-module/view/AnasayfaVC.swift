@@ -53,6 +53,9 @@ extension AnasayfaVC:PresenterToViewAnasayfaProtocol
     func vieweVeriGonder(kisilerListesi: Array<Kisiler>) {
         self.KisilerListe=kisilerListesi
         self.tableview.reloadData()
+        DispatchQueue.main.async {
+            self.tableview.reloadData()
+        }
     }
 }
  
@@ -71,7 +74,7 @@ extension AnasayfaVC : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let kisi = KisilerListe[indexPath.row]
         let cell = tableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! KisiTableViewCell
-        cell.lbadsoyad.text = kisi.KisiAd
+        cell.lbadsoyad.text = kisi.kisi_ad
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -90,10 +93,10 @@ extension AnasayfaVC : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let kisi = KisilerListe[indexPath.row]
         let silAction = UIContextualAction(style: .destructive, title: "Sil") { (contexttualAction , view, bool) in
-            let alert = UIAlertController(title: "Silme İşlemi", message: "\(kisi.KisiAd ?? "") silinsin mi ?" , preferredStyle: .actionSheet)
+            let alert = UIAlertController(title: "Silme İşlemi", message: "\(kisi.kisi_ad ?? "") silinsin mi ?" , preferredStyle: .actionSheet)
             
             let evetAction = UIAlertAction(title: "Evet", style: .cancel) { action in
-                self.anasayfaPresenterNesnesi?.Sil(kisiId: kisi.KisiId)
+                self.anasayfaPresenterNesnesi?.Sil(kisiId: Int(kisi.kisi_id!)!)
             }
             let cancelAction = UIAlertAction(title: "iPtal", style: .destructive, handler: {action in}   )
             alert.addAction(evetAction)

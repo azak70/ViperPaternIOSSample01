@@ -17,8 +17,8 @@ class KisiDetayVC: UIViewController {
         KisiDetayRouter.createModule(ref: self)
 
         if let _kisi = kisi {
-            tfkisiad.text = _kisi.KisiAd
-            tfkisitel.text = _kisi.KisiTel
+            tfkisiad.text = _kisi.kisi_ad
+            tfkisitel.text = _kisi.kisi_tel
         }
         // Do any additional setup after loading the view.
     }
@@ -26,7 +26,7 @@ class KisiDetayVC: UIViewController {
 
     @IBAction func btnguncelle(_ sender: Any) {
         if let ka = tfkisiad.text ,let  kt = tfkisitel.text, let k = kisi {
-            kisidetaypresenternesnesi?.guncelle(kisiId: k.KisiId, kisiAd: ka, kisiTel: kt)
+            kisidetaypresenternesnesi?.guncelle(kisiId: Int(k.kisi_id!)!, kisiAd: ka, kisiTel: kt)
         }
     }
     
