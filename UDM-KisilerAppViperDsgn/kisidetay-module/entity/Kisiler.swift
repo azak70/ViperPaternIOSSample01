@@ -7,13 +7,13 @@
 
 import Foundation
 import UIKit
-class Kisiler {
-    var KisiAd : String?
-    var KisiTel : String?
-    var KisiId :Int
-    init(kisiad:String?,kisitel:String?,kisiid:Int){
-        self.KisiAd=kisiad
-        self.KisiId=kisiid
-        self.KisiTel=kisitel
+class Kisiler :Codable { 
+    var kisi_id : String?
+    var kisi_ad : String?
+    var kisi_tel :String?
+    init(kisiad:String?,kisitel:String?,kisiid:String?){
+        self.kisi_ad=kisiad
+        self.kisi_id=kisiid
+        self.kisi_tel=kisitel
     }
 }

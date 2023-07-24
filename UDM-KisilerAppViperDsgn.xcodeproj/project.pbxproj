@@ -36,6 +36,8 @@
 		AF76E8B22A6BB19500C62AD2 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = AF76E8A82A6BB19400C62AD2 /* FMDatabasePool.m */; };
 		AF76E8B32A6BB19500C62AD2 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = AF76E8AA2A6BB19400C62AD2 /* FMDatabase.m */; };
 		AF76E8B42A6BB19500C62AD2 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = AF76E8AD2A6BB19400C62AD2 /* FMResultSet.m */; };
+		AF76E8B72A6D44C600C62AD2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AF76E8B62A6D44C600C62AD2 /* Alamofire */; };
+		AF76E8B92A6D540400C62AD2 /* KisilerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76E8B82A6D540400C62AD2 /* KisilerCevap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,7 @@
 		AF76E8AD2A6BB19400C62AD2 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		AF76E8AE2A6BB19400C62AD2 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
 		AF76E8AF2A6BB19500C62AD2 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		AF76E8B82A6D540400C62AD2 /* KisilerCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerCevap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF76E8A02A6BAB2F00C62AD2 /* libsqlite3.tbd in Frameworks */,
+				AF76E8B72A6D44C600C62AD2 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				AF2DCF5F2A2692FF00302448 /* Kisiler.swift */,
+				AF76E8B82A6D540400C62AD2 /* KisilerCevap.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -343,6 +348,9 @@
 			dependencies = (
 			);
 			name = "UDM-KisilerAppViperDsgn";
+			packageProductDependencies = (
+				AF76E8B62A6D44C600C62AD2 /* Alamofire */,
+			);
 			productName = "UDM-KisilerAppViperDsgn";
 			productReference = AF2DCF442A2679E500302448 /* UDM-KisilerAppViperDsgn.app */;
 			productType = "com.apple.product-type.application";
@@ -372,6 +380,9 @@
 				Base,
 			);
 			mainGroup = AF2DCF3B2A2679E500302448;
+			packageReferences = (
+				AF76E8B52A6D44C600C62AD2 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = AF2DCF452A2679E500302448 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -418,6 +429,7 @@
 				AF2DCF482A2679E500302448 /* AppDelegate.swift in Sources */,
 				AF2DCF4A2A2679E500302448 /* SceneDelegate.swift in Sources */,
 				AF2DCF5C2A267DCE00302448 /* KisiKayitVC.swift in Sources */,
+				AF76E8B92A6D540400C62AD2 /* KisilerCevap.swift in Sources */,
 				AF5DD6192A6314430009B9EB /* AnasayfaPresenter.swift in Sources */,
 				AF5DD6162A63140F0009B9EB /* AnasayfaInteractor.swift in Sources */,
 				AF5DD6232A63177F0009B9EB /* KisiKayitInteractor.swift in Sources */,
@@ -650,6 +662,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF76E8B52A6D44C600C62AD2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF76E8B62A6D44C600C62AD2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF76E8B52A6D44C600C62AD2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF2DCF3C2A2679E500302448 /* Project object */;
 }
